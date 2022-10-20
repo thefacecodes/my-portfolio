@@ -1,0 +1,569 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@300;400&family=Lexend+Deca:wght@300;400&family=Raleway:wght@300;400;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(209, 23%, 22%);
+  /* width: 100%; */
+  /* align-items: center; */
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  /* display: flex;
+  justify-content: center; */
+  /* position: relative; */
+}
+nav {
+  /* border: 2px solid white; */
+  width: 100%;
+  position: fixed;
+  bottom: 2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+}
+
+.nav {
+  /* height: 5em; */
+  padding: 1em;
+  border-radius: 5em;
+  /* background: #2b6cb3;
+   */
+  background: hsl(209, 23%, 22%);
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 7px rgba(0, 0, 0, 0.2);
+  width: 35em;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-around;
+  /* left: auto;
+  right: auto; */
+}
+
+.home::after {
+  content: "The Face";
+  position: absolute;
+  /* background: black; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+  font-family: Raleway;
+  font-weight: 600;
+  z-index: -1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+h1 {
+  font-family: Space Mono;
+  font-size: 3.5em;
+  color: white;
+}
+
+.icons {
+  font-size: 2.2em;
+  color: white;
+  
+}
+
+.active {
+  /* background: red; */
+  padding: 1em;
+  border-radius: 50%;
+  margin-top: -8%;
+  border: 3px solid white;
+  /* height: 100%; */
+  background: hsl(209, 23%, 22%);
+transition: 0.5s ease-in-out;
+  box-shadow: 3px 3px 5px 7px rgba(0, 0, 0, 0.2);
+}
+
+.home,
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5em;
+}
+
+.home p,
+.projects p, .about p, .resume p, .contact p, .tools p {
+  font-size: 1.4em;
+  color: white;
+  width: 50%;
+  margin: 1em 0;
+  text-align: center;
+  font-family: Lexend Deca;
+}
+
+.projects::after {
+  content: "Projects";
+  position: absolute;
+  /* background: black; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+  font-family: Raleway;
+  font-weight: 600;
+  z-index: -1;
+}
+
+.projects {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.html-css {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: Antonio;
+  margin: 2em 0;
+}
+
+/* .mySwiper, .swiper-slide {
+  position: static;
+} */
+
+/* .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+} */
+
+.swiper-slide img {
+  display: block;
+  /* position: relative; */
+  width: 100%;
+  /* max-height: 100%; */
+}
+
+/* .swiper-slide img {
+  position: relative;
+} */
+
+.details {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.details p {
+  font-size: 1.2em;
+  width: 90%;
+}
+
+.details a {
+  text-decoration: none;
+  color: black;
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  font-size: 1.1em;
+  font-family: Lexend Deca;
+  margin-top: 0.5em;
+}
+
+.swiper-slide:hover .details {
+  display: flex;
+}
+
+.contact {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white
+}
+
+.contact::after {
+  content: "Contact";
+  position: absolute;
+  /* background: black; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+  font-family: Raleway;
+  font-weight: 600;
+  z-index: -1;
+}
+
+/* .contact p, .tools p{
+  font-family: Lexend Deca;
+  margin-block: 10px;
+} */
+
+.contact-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding-block: 20px;
+}
+
+.contact-detail, .contact-content form {
+  width: 45%;
+  /* box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.4), 3px 3px 5px rgba(0, 0, 0, 0.2); */
+  padding: 20px;
+ 
+}
+
+.contact-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content form input, .contact-content form textarea {
+   background: rgba(0, 0, 0, 0.2);
+   border: none;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-content form input {
+  height: 40px;
+
+}
+
+.contact-content form label {
+  font-size: 16px;
+  margin-block: 10px;
+  font-family: Lexend Deca;
+}
+
+.contact-content form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contact-content form button {
+  height: 35px;
+  border: none;
+  outline: none;
+  color: hsl(209, 23%, 22%);
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.socials {
+  margin-top: 35px;
+}
+
+.socials .contactIcon {
+  font-size: 35px;
+  margin-inline: 10px;
+}
+
+.contact-detail p {
+  font-size: 20px;
+}
+
+.contact-detail p.phone {
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.contact-detail p .contactIcon {
+  margin-right: 10px;
+}
+
+.contact-detail {
+  padding: 50px;
+}
+
+.tools {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white
+}
+
+.tools::after {
+  content: "My Stacks";
+  position: absolute;
+  /* background: black; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+  font-family: Raleway;
+  font-weight: 600;
+  z-index: -1;
+}
+
+.resume {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: 70vh;
+}
+
+.resume::after {
+  content: "Resume";
+  position: absolute;
+  /* background: black; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+  font-family: Raleway;
+  font-weight: 600;
+  z-index: -1;
+}
+
+.resume p {
+  font-family: Lexend Deca;
+}
+
+.viewNdownload {
+  margin-top: 50px;
+}
+
+.viewNdownload a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 30px;
+  background: green;
+  font-family: Lexend Deca;
+  margin-inline: 20px;
+  border-radius: 5px;
+}
+
+.toolsIuse {
+  padding: 10px;
+  width: 50%;
+  font-size: 25px;
+}
+
+.eachtool {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.eachtool p {
+  width: unset;
+  font-size: unset;
+}
+
+.bar {
+  width: 70%;
+  height: 10px;
+  background: lightgrey;
+  border-radius: 50px;
+}
+
+.progress {
+  height: 100%;
+  width: 95%;
+  background: green;
+  border-radius: 50px;
+}
+
+.css {
+  width: 75%;
+}
+
+.js {
+  width: 60%;
+}
+
+.vue {
+  width: 60%;
+}
+
+.react {
+  width: 65%;
+}
+
+.tailwind {
+  width: 85%;
+}
+
+.wordpress {
+  width: 90%;
+}
+
+.about {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: 70vh;
+}
+
+.about::after {
+  content: "About";
+  position: absolute;
+  /* background: black; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+  font-family: Raleway;
+  font-weight: 600;
+  z-index: -1;
+}
+
+.modal {
+  background: green;
+  margin-block: 10px;
+  font-family: Lexend Deca;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.about p {
+  font-family: Lexend Deca;
+}
+
+@media (max-width:480px) {
+
+  nav {
+    bottom: 1em;
+  }
+
+  .home, .about, .contact, .projects, .tools, .resume {
+    padding: 5em 2em;
+    text-align: center;
+  }
+
+  .home::after, .about::after, .contact::after, .projects::after, .tools::after, .resume::after {
+    font-size: 70px;
+  }
+
+  .home p,
+.projects p, .about p, .resume p, .contact p, .tools p {
+  width: 100%;
+}
+
+.contact-content {
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.contact-detail, .contact-content form {
+  width: 100%;
+  padding: unset;
+}
+
+.contact-content form button  {
+  width: 50%;
+}
+
+.contact-detail {
+  margin-bottom: 30px;
+  margin-top: unset;
+}
+
+.contact-content form {
+  text-align: left;
+}
+
+.toolsIuse {
+  width: 100%;
+  /* font-size: unset; */
+}
+.home p,
+.projects p, .about p, .resume p, .contact p, .tools p  {
+  font-size: 1em;
+}
+
+.viewNdownload a {
+  margin-inline: 5px;
+  padding: 10px 15px;
+}
+
+.eachtool p {
+  width: unset;
+  font-size: initial;
+}
+
+
+
+
+.icons {
+  font-size: 1.7em;
+}
+  
+}

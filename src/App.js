@@ -9,8 +9,32 @@ import Tools from "./Tools";
 import About from "./About";
 import Testimonial from "./Testimonial";
 import SendTestimonial from "./SendTestimonial";
+import { useEffect, useState } from "react";
+import theface from "./assets/theface.jpg"
 
 function App() {
+
+  const [loader, setScreen] = useState(true)
+
+  const Preloader = () => {
+      useEffect(()=> {
+      setTimeout(()=> setScreen(false), 2000)
+  }, [])
+    return (
+    <div className="preloader">
+      <img src={theface} alt="" />
+    </div>
+  )
+  }
+
+  
+
+if(loader) {
+ return (
+  <Preloader />
+ )
+} else {
+
   return (
     <Router>
     <div className="App">
@@ -29,6 +53,7 @@ function App() {
     </div>
     </Router>
   );
+}
 }
 
 export default App;

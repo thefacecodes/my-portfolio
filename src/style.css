@@ -304,23 +304,33 @@ p.short {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
+  margin-block: 20px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), -3px -3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .quote p {
   width: 100%;
   font-size: 1em;
-  color: gray;
+  text-align: right;
+  /* color: gray; */
 }
 
 .quote h3 {
-  color: white;
+  color: gray;
   font-family: Raleway;
 }
 
+.send form img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  position: relative;
+}
+
+
 .quote h5 {
-  color: gray;
+  color: white;
   margin-top: 5px;
   font-family: Lexend Deca;
 }
@@ -345,12 +355,12 @@ p.short {
  
 }
 
-.contact-content form {
+.contact-content form, .send form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-content form input, .contact-content form textarea {
+.contact-content form input, .contact-content form textarea, .send form input, .send form textarea {
    background: rgba(0, 0, 0, 0.2);
    border: none;
   width: 100%;
@@ -364,18 +374,18 @@ p.short {
 
 }
 
-.contact-content form label {
+.contact-content form label, .send form label {
   font-size: 16px;
   margin-block: 10px;
   font-family: Lexend Deca;
 }
 
-.contact-content form textarea {
+.contact-content form textarea, .send form textarea {
   height: 200px;
   resize: none;
 }
 
-.contact-content form button {
+.contact-content form button, .send form button {
   height: 35px;
   border: none;
   outline: none;
@@ -396,6 +406,10 @@ p.short {
 
 .contact-detail p {
   font-size: 20px;
+}
+
+label.photo {
+  text-align: center;
 }
 
 .contact-detail p.phone {
@@ -569,6 +583,26 @@ p.short {
   z-index: -1;
 }
 
+.send form {
+  width: 50%;
+  color: white
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.preloader img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: loading 1.5s 0s infinite forwards linear;
+  border: 2px solid white;
+}
+
 .modal {
   background: green;
   margin-block: 10px;
@@ -577,8 +611,25 @@ p.short {
   border-radius: 5px;
 }
 
+.send {
+  margin-bottom: 50px;
+}
+
 .about p {
   font-family: Lexend Deca;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width:480px) {
@@ -606,6 +657,11 @@ p.short {
   gap: 20px;
 }
 
+.send form {
+  width: 100%;
+  color: white
+}
+
 h1 {
   font-size: 2.5em;
 }
@@ -615,7 +671,7 @@ h1 {
   padding: unset;
 }
 
-.contact-content form button  {
+.contact-content form button, .send form button  {
   width: 50%;
 }
 
@@ -633,7 +689,7 @@ h1 {
   /* font-size: unset; */
 }
 .home p,
-.projects p, .about p, .resume p, .contact p, .tools p  {
+.projects p, .about p, .resume p,.testimonial p, .send p, .contact p, .tools p  {
   font-size: 1em;
 }
 

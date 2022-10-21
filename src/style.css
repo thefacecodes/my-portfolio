@@ -28,6 +28,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100000;
   /* background: red; */
 }
 
@@ -50,6 +51,24 @@ nav {
 
 .home::after {
   content: "The Face";
+  position: absolute;
+  /* background: black; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+  font-family: Raleway;
+  font-weight: 600;
+  z-index: -1;
+}
+
+.send::after {
+  content: "Feedback";
   position: absolute;
   /* background: black; */
   top: 0;
@@ -96,8 +115,24 @@ transition: 0.5s ease-in-out;
   box-shadow: 3px 3px 5px 7px rgba(0, 0, 0, 0.2);
 }
 
+.about {
+  margin-bottom: 50px;
+}
+
+.about a {
+  margin-block: 25px;
+}
+
+.about a, .testimonial a {
+  background: green;
+  border-radius: 5px;
+  padding: 10px 30px;
+
+  font-family: Raleway;
+}
+
 .home,
-.projects {
+.projects, .testimonial, .send {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -106,13 +141,17 @@ transition: 0.5s ease-in-out;
 }
 
 .home p,
-.projects p, .about p, .resume p, .contact p, .tools p {
+.projects p, .send p, .about p, .resume p, .contact p, .tools p, .testimonial p{
   font-size: 1.4em;
   color: white;
   width: 50%;
   margin: 1em 0;
   text-align: center;
   font-family: Lexend Deca;
+}
+
+p.short {
+  font-size: 1em;
 }
 
 .projects::after {
@@ -217,7 +256,8 @@ transition: 0.5s ease-in-out;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white
+  color: white;
+  margin-bottom: 50px;
 }
 
 .contact::after {
@@ -236,6 +276,53 @@ transition: 0.5s ease-in-out;
   font-family: Raleway;
   font-weight: 600;
   z-index: -1;
+}
+
+.testimonial::after {
+  content: "Testimonial";
+  position: absolute;
+  /* background: black; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8em;
+  font-family: Raleway;
+  font-weight: 600;
+  z-index: -1;
+}
+
+.quote {
+  width: 300px;
+  padding: 10px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), -3px -3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.quote p {
+  width: 100%;
+  font-size: 1em;
+  color: gray;
+}
+
+.quote h3 {
+  color: white;
+  font-family: Raleway;
+}
+
+.quote h5 {
+  color: gray;
+  margin-top: 5px;
+  font-family: Lexend Deca;
 }
 
 /* .contact p, .tools p{
@@ -330,7 +417,8 @@ transition: 0.5s ease-in-out;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white
+  color: white;
+  margin-bottom: 50px;
 }
 
 .tools::after {
@@ -499,17 +587,17 @@ transition: 0.5s ease-in-out;
     bottom: 1em;
   }
 
-  .home, .about, .contact, .projects, .tools, .resume {
+  .home, .send, .about, .contact, .testimonial, .projects, .tools, .resume {
     padding: 5em 2em;
     text-align: center;
   }
 
-  .home::after, .about::after, .contact::after, .projects::after, .tools::after, .resume::after {
+  .home::after, .send::after, .testimonial::after, .about::after, .contact::after, .projects::after, .tools::after, .resume::after {
     font-size: 70px;
   }
 
   .home p,
-.projects p, .about p, .resume p, .contact p, .tools p {
+.projects p, .about p, .send p, .testimonial p, .resume p, .contact p, .tools p {
   width: 100%;
 }
 

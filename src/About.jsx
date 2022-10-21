@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function About() {
   return (
@@ -14,9 +15,9 @@ function About() {
         <p>One of my objectives is to secure a position in a dynamic organisation where I can use my skills and knowledge to develop my career as well as help the company grow.
 
         </p>
-       <p>I love challenges and welcome creative challenges</p>
-        <p>I love programming, it's fun</p>
+       <p>I love and welcome creative challenges</p>
         <p>I love networking, and welcome any opportunity to connect, learn and grow</p>
+        <Link to="/testimonial">View Testimonials</Link>
     </div>
   )
 }

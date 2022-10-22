@@ -56,18 +56,18 @@ const Modal =  () => {
   return (
     <div className='send'>
        <h1>Send Testimonial</h1> 
-       <p>Please fill the form below to give your testimonials about my work</p>
+       <p>Please fill the form below to give a review.</p>
        <form onSubmit={submitForm}>
         <label htmlFor="image" className='photo'>
           <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" ref={avatar} alt="" />
         </label>
         <input type="file" onChange={swapAvatar} style={{display: "none"}} accept='image/*' name="image" id="image" />
         <label htmlFor="name">Name</label>
-        <input type="text" name="name" id="name" value={name} required onChange={(e)=>setName(e.target.value)} placeholder='Enter your name' />
+        <input type="text" name="name" autocomplete="off" id="name" value={name} required onChange={(e)=>setName(e.target.value)} placeholder='Enter your name' />
         <label htmlFor="occupation">Who are you ?</label>
-        <input type="text" name="occupation" value={occupation} required onChange={(e)=>setOccupation(e.target.value)} id="occupation" placeholder='What do you do ?' />
+        <input type="text" name="occupation" value={occupation} required onChange={(e)=>setOccupation(e.target.value)} autocomplete="off" id="occupation" placeholder='What do you do ?' />
         <label htmlFor="review">Review</label>
-        <textarea name="review" id="review" value={review} required placeholder="A detailed review of your experience of Ezekiel's work" onChange={(e) => setReview(e.target.value)}></textarea>
+        <textarea name="review" autocomplete="off" id="review" value={review} required placeholder="A detailed review of your experience of Ezekiel's work" onChange={(e) => setReview(e.target.value)}></textarea>
         {modal && <Modal />}
         <button type="submit">Submit Testimonial</button>
        </form>

@@ -654,6 +654,7 @@ h1 {
 
 .toolsIuse {
   width: 100%;
+  gap: 15px;
   /* font-size: unset; */
 }
 .home p,

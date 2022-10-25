@@ -183,7 +183,7 @@ function Projects() {
           slidesPerView={"auto"}
           loop= {true}
           autoplay={{
-            delay: 500,
+            delay: 2500,
             disableOnInteraction: true
           }}
           coverflowEffect={{
@@ -194,7 +194,7 @@ function Projects() {
             slideShadows: false,
           }}
           pagination={false}
-          modules={[EffectCoverflow, Pagination]}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
           className="mySwiper"
         >
           <SwiperSlide className="swiper-slide" style={each}>
@@ -411,7 +411,7 @@ function Projects() {
               <h2>Portfolio</h2>
               <p>My Portfolio</p>
              
-              <a href="https://thefacecodes.web.app/">
+              <a href="https://thefacecodes.vercel.app/">
                 <FontAwesomeIcon icon={faLink} /> Live site
               </a>
             </div>

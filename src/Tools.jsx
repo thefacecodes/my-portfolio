@@ -53,6 +53,12 @@ function Tools() {
         </div>
         <div className="eachtool">
           <button>
+            <FontAwesomeIcon className="contactIcon" icon={["fab", "nuxt"]} />&nbsp;
+            Nuxt JS
+          </button>
+        </div>
+        <div className="eachtool">
+          <button>
             <FontAwesomeIcon
               className="contactIcon"
               icon={["fab", "bootstrap"]}

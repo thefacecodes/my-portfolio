@@ -27,6 +27,8 @@ import softstore from "./assets/softstore.png";
 import jstore from "./assets/jstore.png";
 import portfolio from "./assets/portfolio.png";
 import audiophille from "./assets/audiophille.png";
+import coral from "./assets/coral.png";
+
 
 import "swiper/css";
 import "swiper/css/bundle";
@@ -501,6 +503,49 @@ function Projects() {
             </div>
           </SwiperSlide>
          
+        </Swiper>
+      </div>
+      </div>
+      <div className="html-css">
+        <h2>Nuxt JS</h2>
+        <div>
+        <Swiper
+          style={styles}
+          // className="swiper"
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          loop= {true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: true
+          }}
+          coverflowEffect={{
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+           
+          }}
+          pagination={false}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          className="mySwiper"
+        >
+          <SwiperSlide className="swiper-slide" style={each}>
+            <img src={coral} alt="" />
+            <div className="details">
+              <h2>Cora'l Store</h2>
+              <p>An E-commerce store</p>
+              <a href="https://github.com/thefacecodes/coral-store">
+                <FontAwesomeIcon icon={faGithub} /> View Repo
+              </a>
+              <a href="https://coral-store.web.app/">
+                <FontAwesomeIcon icon={faLink} /> Live site
+              </a>
+            </div>
+          </SwiperSlide>        
         </Swiper>
       </div>
       </div>

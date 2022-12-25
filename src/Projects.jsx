@@ -25,9 +25,10 @@ import trasave from "./assets/trasave.png";
 import nft from "./assets/nft.png";
 import softstore from "./assets/softstore.png";
 import jstore from "./assets/jstore.png";
-import portfolio from "./assets/portfolio.png";
 import audiophille from "./assets/audiophille.png";
 import coral from "./assets/coral.png";
+import tstodo from "./assets/tstodo.png";
+import foodtucks from "./assets/foodtuck.png";
 
 
 import "swiper/css";
@@ -355,7 +356,7 @@ function Projects() {
       </div>
       </div>
       <div className="html-css">
-        <h2>React</h2>
+        <h2>React / TypeScript</h2>
         <div>
         <Swiper
           style={styles}
@@ -408,17 +409,31 @@ function Projects() {
             </div>
           </SwiperSlide>
           <SwiperSlide className="swiper-slide" style={each}>
-            <img src={portfolio} style={extend} alt="" />
+            <img src={tstodo} style={extend} alt="" />
             <div className="details">
-              <h2>Portfolio</h2>
-              <p>My Portfolio</p>
-             
-              <a href="https://thefacecodes.vercel.app/">
+              <h2>TypeScript Todo App</h2>
+              <p>A to-do management app</p>
+              <a href="https://github.com/thefacecodes/typescript-todoapp">
+                <FontAwesomeIcon icon={faGithub} /> View Repo
+              </a>
+              <a href="https://theface-tstodoapp.vercel.app/">
                 <FontAwesomeIcon icon={faLink} /> Live site
               </a>
             </div>
           </SwiperSlide>
-         
+          <SwiperSlide className="swiper-slide" style={each}>
+            <img src={foodtucks} alt="" />
+            <div className="details">
+              <h2>FoodTuck Food App</h2>
+              <p>A Food Order App</p>
+              <a href="https://github.com/thefacecodes/foodapp">
+                <FontAwesomeIcon icon={faGithub} /> View Repo
+              </a>
+              <a href="https://foodtucks.web.app/">
+                <FontAwesomeIcon icon={faLink} /> Live site
+              </a>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
       </div>
